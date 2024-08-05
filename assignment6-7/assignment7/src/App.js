@@ -1,23 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import LoginForm from './Component/LoginForm';
+import RegistrationForm from './Component/RegistrationForm';
+import SurveyForm from './Component/SurveyForm';
+import SearchFilter from './Component/SearchFilter';
+import SettingsForm from './Component/SettingsForm';
 
 function App() {
+  const [activeForm, setActiveForm] = useState('');
+
+  const renderForm = () => {
+    switch (activeForm) {
+      case 'login':
+        return <LoginForm />;
+      case 'registration':
+        return <RegistrationForm />;
+      case 'survey':
+        return <SurveyForm />;
+      case 'settings':
+        return <SettingsForm />;
+      case 'search':
+        return <SearchFilter />;
+      default:
+        return <p>Please select a form to display.</p>;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">Forms and Controlled Components</h1>
+
+      <div className="d-flex justify-content-center mb-4">
+        <button 
+          className="btn btn-primary mx-2"
+          onClick={() => setActiveForm('login')}
         >
-          Learn React
-        </a>
-      </header>
+          Login Form
+        </button>
+        <button 
+          className="btn btn-success mx-2"
+          onClick={() => setActiveForm('registration')}
+        >
+          Registration Form
+        </button>
+        <button 
+          className="btn btn-warning mx-2"
+          onClick={() => setActiveForm('survey')}
+        >
+          Survey Form
+        </button>
+        <button 
+          className="btn btn-info mx-2"
+          onClick={() => setActiveForm('settings')}
+        >
+          Settings Form
+        </button>
+        <button 
+          className="btn btn-secondary mx-2"
+          onClick={() => setActiveForm('search')}
+        >
+          Search Filter
+        </button>
+      </div>
+
+      <div className="mt-4">
+        {renderForm()}
+      </div>
     </div>
   );
 }

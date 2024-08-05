@@ -1,0 +1,21 @@
+.app-background {
+  background-color: #f8f9fa; /* Light grey background */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  color: #343a40; /* Dark grey for the heading */
+}
+
+.card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to cards */
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
