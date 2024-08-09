@@ -11,7 +11,7 @@ const Contact = () => {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
         // Store form data in local storage
         localStorage.setItem('contactFormData', JSON.stringify(formData));
 
