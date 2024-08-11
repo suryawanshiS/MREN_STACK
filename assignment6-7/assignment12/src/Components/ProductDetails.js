@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import { Container, Card, Button, Row, Col, Form } from 'react-bootstrap';
 
 const products = [
-    { id: 1, name: 'Portable Music Player', description: 'Compact and lightweight music player.', image: '/assets/images/product1.jpg' },
-    { id: 2, name: 'Compact Music Player', description: 'Small yet powerful with advanced features.', image: '/assets/images/product2.jpg' },
-    { id: 3, name: 'Premium Music Player', description: 'High-end audio player with exceptional sound quality.', image: '/assets/images/product3.jpg' }
+    { id: 1, name: 'Portable Music Player', description: 'Compact and lightweight music player.', image: 'https://m.media-amazon.com/images/I/41g-ku4smmL._SX679_.jpg' },
+    { id: 2, name: 'Compact Music Player', description: 'Small yet powerful with advanced features.', image: 'https://m.media-amazon.com/images/I/81Oxwq8CePL._SX679_.jpg' },
+    { id: 3, name: 'Premium Music Player', description: 'High-end audio player with exceptional sound quality.', image: 'https://m.media-amazon.com/images/I/71ftBTXfsbL._SX522_.jpg' }
 ];
 
 const ProductDetails = () => {
